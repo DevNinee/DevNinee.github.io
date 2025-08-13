@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio - Erick Dos Santos</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; transition:0.3s; }
+body { background:#f9f9f9; color:#333; line-height:1.6; scroll-behavior:smooth; }
+a { color:#0070f3; text-decoration:none; }
+a:hover { text-decoration:underline; }
+body.dark { background:#121212; color:#f0f0f0; }
+body.dark header { background:#1f1f1f; }
+body.dark a { color:#1e90ff; }
+body.dark .project { background:#1e1e1e; box-shadow:0 2px 5px rgba(255,255,255,0.1); }
+header { background:#0070f3; color:#fff; padding:2rem 1rem; text-align:center; position:relative; }
+header h1 { margin-bottom:0.5rem; }
+header p { font-size:1.1rem; margin-bottom:0.2rem; }
+.toggle-btn { position:absolute; top:1rem; right:1rem; background:#fff; border:none; padding:0.5rem 1rem; border-radius:5px; cursor:pointer; }
+body.dark .toggle-btn { background:#333; color:#fff; }
+section { max-width:1000px; margin:2rem auto; padding:0 1rem; }
+h2 { color:#0070f3; margin-bottom:1rem; text-align:center; }
+.skills, .projects, .certs, .timeline { display:grid; gap:1.5rem; }
+.skills { grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
+.skill-bar { width:100%; background:#ddd; border-radius:5px; overflow:hidden; }
+.skill-bar-inner { height:15px; background:#0070f3; width:0%; border-radius:5px; }
+.projects { grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+.project { background:#fff; padding:1rem; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:relative; overflow:hidden; transition:0.3s; cursor:pointer; }
+.project:hover { transform:translateY(-5px); box-shadow:0 5px 15px rgba(0,0,0,0.2); }
+.project img { width:100%; border-radius:5px; margin-bottom:0.5rem; transition:0.3s; }
+.project:hover img { transform:scale(1.05); }
+.project-details { position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); color:#fff; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; opacity:0; transition:0.3s; padding:1rem; }
+.project:hover .project-details { opacity:1; }
+.project-details a { display:inline-block; margin-top:0.5rem; padding:0.4rem 0.8rem; background:#0070f3; color:#fff; border-radius:5px; text-decoration:none; }
+.project-details a:hover { background:#005bb5; }
+.certs { grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
+.timeline { grid-template-columns:1fr; position:relative; margin:3rem 0; }
+.timeline::before { content:''; position:absolute; left:50%; top:0; bottom:0; width:4px; background:#0070f3; transform:translateX(-50%); }
+.timeline-item { position:relative; width:50%; padding:1rem; }
+.timeline-item:nth-child(odd) { left:0; text-align:right; }
+.timeline-item:nth-child(even) { left:50%; text-align:left; }
+.timeline-item::before { content:''; position:absolute; top:1rem; width:15px; height:15px; background:#0070f3; border-radius:50%; z-index:1; }
+.timeline-item:nth-child(odd)::before { right:-8px; }
+.timeline-item:nth-child(even)::before { left:-8px; }
+.contact a { margin:0 0.5rem; }
+footer { text-align:center; padding:1rem; margin-top:2rem; font-size:0.9rem; color:#555; }
+@media(max-width:768px){ .timeline-item { width:100%; left:0 !important; text-align:left !important; padding-left:2rem; } .timeline::before { left:1rem; } }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Erick Dos Santos</h1>
+<p> Brasília - DF, Brazil | 📱 +55 61 98165-7563 | ✉️ erickgesterling@gmail.com</p>
+<p> GitHub: <a href="https://github.com/DevNinee" target="_blank">github.com/DevNinee</a> | LinkedIn: <a href="https://linkedin.com/in/erick-voyager" target="_blank">linkedin.com/in/erick-voyager</a></p>
+<button class="toggle-btn" onclick="toggleDark()"> Dark Mode</button>
+</header>
+
+<section id="summary">
+<h2>Professional Summary</h2>
+<p>Software Engineering undergraduate with a solid foundation in programming, web development, and software logic. Hands-on experience building interactive web applications, dashboards, and creative online experiences. Passionate about technology, problem-solving, and delivering solutions that generate real impact. Seeking to apply technical skills and fast-learning ability in the VTEX Summer Internship 2026, contributing to innovative commerce solutions.</p>
+</section>
+
+<section id="skills">
+<h2>Technical Skills</h2>
+<div class="skills">
+  <div class="skill"><p>Languages: Python, JavaScript, C, SQL</p><div class="skill-bar"><div class="skill-bar-inner" style="width:90%"></div></div></div>
+  <div class="skill"><p>Web Development: HTML5, CSS3, React (basic), Tailwind</p><div class="skill-bar"><div class="skill-bar-inner" style="width:85%"></div></div></div>
+  <div class="skill"><p>Back-End & APIs: FastAPI, Django, REST APIs</p><div class="skill-bar"><div class="skill-bar-inner" style="width:80%"></div></div></div>
+  <div class="skill"><p>Databases: MySQL, PostgreSQL, SQLite</p><div class="skill-bar"><div class="skill-bar-inner" style="width:80%"></div></div></div>
+  <div class="skill"><p>Tools: Git/GitHub, VS Code, Postman, Canva</p><div class="skill-bar"><div class="skill-bar-inner" style="width:75%"></div></div></div>
+  <div class="skill"><p>Other: UML, Software Logic, Social Media Content Creation</p><div class="skill-bar"><div class="skill-bar-inner" style="width:70%"></div></div></div>
+  <div class="skill"><p>Languages: Portuguese (Native), English (Intermediate – Technical Reading & Writing)</p><div class="skill-bar"><div class="skill-bar-inner" style="width:70%"></div></div></div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="projects">
+
+<div class="project">
+  <img src="https://via.placeholder.com/400x200.png?text=SaaS+InvestSim" alt="SaaS InvestSim">
+  <div class="project-details">
+    <h3>SaaS InvestSim</h3>
+    <p>Interactive web application for simulating, comparing, and monitoring investments. Designed for beginner investors.</p>
+    <p>Technologies: HTML, JavaScript</p>
+    <a href="#">GitHub</a>
+  </div>
+</div>
+
+<div class="project">
+  <img src="https://via.placeholder.com/400x200.png?text=WhatsApp+Automation" alt="WhatsApp Automation">
+  <div class="project-details">
+    <h3>WhatsApp Automation Tool</h3>
+    <p>Automation script capable of sending bulk WhatsApp messages to multiple contacts.</p>
+    <p>Technologies: Python, Jupyter Notebook</p>
+    <a href="#">GitHub</a>
+  </div>
+</div>
+
+<div class="project">
+  <img src="https://via.placeholder.com/400x200.png?text=XTech+Website" alt="XTech Website">
+  <div class="project-details">
+    <h3>XTech Responsive Website</h3>
+    <p>Modern responsive site built with Bootstrap 5 and Vanilla JS, dark mode, animated modals, backend integration.</p>
+    <p>Technologies: HTML, Bootstrap 5, JavaScript</p>
+    <a href="#">GitHub</a>
+  </div>
+</div>
+
+<div class="project">
+  <img src="https://via.placeholder.com/400x200.png?text=Blog+All+My+Zone" alt="Blog All My Zone">
+  <div class="project-details">
+    <h3>Blog All My Zone</h3>
+    <p>Personal blog with clean design, optimized UX, interactive features.</p>
+    <p>Technologies: HTML, CSS, JavaScript</p>
+    <a href="#">GitHub</a>
+  </div>
+</div>
+
+<div class="project">
+  <img src="https://via.placeholder.com/400x200.png?text=MIAUPow+Game" alt="MIAUPow Game">
+  <div class="project-details">
+    <h3>MIAUPow Game</h3>
+    <p>Rock-paper-scissors inspired game with special cards, life points, animated effects, playable solo or multiplayer.</p>
+    <p>Technologies: Python</p>
+    <a href="#">GitHub</a>
+  </div>
+</div>
+
+<div class="project">
+  <img src="https://via.placeholder.com/400x200.png?text=Next+Move+Landing" alt="Next Move Landing">
+  <div class="project-details">
+    <h3>Next Move Landing Page</h3>
+    <p>Smooth animated login/signup interface with modern transitions and responsive design.</p>
+    <p>Technologies: HTML, CSS, JavaScript</p>
+    <a href="#">GitHub</a>
+  </div>
+</div>
+
+</div>
+</section>
+
+<section id="timeline">
+<h2>Experience & Learning Timeline</h2>
+<div class="timeline">
+
+<div class="timeline-item">
+  <h3>2019-2022</h3>
+  <p>Technical Degree in Electronics – IFB</p>
+</div>
+
+<div class="timeline-item">
+  <h3>2023-Present</h3>
+  <p>Software Engineering – UCB (Expected Graduation: 2nd Sem 2027)</p>
+</div>
+
+<div class="timeline-item">
+  <h3>2023-Present</h3>
+  <p>Projects & Freelance development: Web apps, dashboards, automation scripts</p>
+</div>
+
+</div>
+</section>
+
+<section id="certifications">
+<h2>Certifications & Courses</h2>
+<div class="certs">
+  <div class="project">
+    <h3>React Course - Alura</h3>
+    <p>Advanced React and functional components.</p>
+    <a href="#">Certificate</a>
+  </div>
+  <div class="project">
+    <h3>Python for Web Development</h3>
+    <p>APIs, automation, and web projects.</p>
+    <a href="#">Certificate</a>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p class="contact">
+ <a href="mailto:erickgesterling@gmail.com">erickgesterling@gmail.com</a> |
+ +55 61 98165-7563 |
+ <a href="https://github.com/DevNinee" target="_blank">GitHub</a> |
+LinkedIn: <a href="https://linkedin.com/in/erick-voyager" target="_blank">linkedin.com/in/erick-voyager</a>
+</p>
+</section>
+
+<footer>
+<p>Portfólio criado por Erick Dos Santos | Inspirado no VTEX Internship Program</p>
+</footer>
+
+<script>
+function toggleDark(){document.body.classList.toggle('dark');}
+window.addEventListener('load', ()=>{document.querySelectorAll('.skill-bar-inner').forEach(bar=>{bar.style.width=bar.style.width;});});
+</script>
+
+</body>
+</html>
